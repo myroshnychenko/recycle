@@ -1,22 +1,7 @@
 {% block title %}
-    <h1>Welcome to recycle batteries application</h1>
+    <h1>Batteries Pack creation</h1>
 {% endblock %}
 
 {% block content %}
-    <h4>Click <a href="/app_dev.php/batterypack/new">here</a> to add new batterias to the box</h4>
-    <h2>Statistics:</h2>
-    <table>
-        <thead>
-            <th>Type</th>
-            <th>Amount</th>
-        </thead>
-        <tbody>
-            {% for f in form %}
-            <tr>
-                <td>{{ loop.index }}</td>
-                <td>{{ form[loop.index - 1] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {{ form(form) }}
 {% endblock %}

@@ -1,14 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: d.myroshnychenko
- * Date: 31.08.14
- * Time: 22:04
- */
 
 namespace Acme\DemoBundle\Test;
 
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class BatteriesPackTest {
+class BatteriesPackTest extends WebTestCase
+{
+    public function testIndex()
+    {
+        $client = static::createClient();
 
-} 
+        $crawler = $client->request('GET', '/statistic');
+
+        $this->assertEquals(2, $crawler->filter('tr')->count());
+
+    }
+}
