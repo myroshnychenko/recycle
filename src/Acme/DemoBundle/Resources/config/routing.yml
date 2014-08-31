@@ -2,6 +2,14 @@ _welcome:
     path:     /
     defaults: { _controller: AcmeDemoBundle:Welcome:index }
 
+_new_battery_pack:
+    path:     /batterypack/new
+    defaults: { _controller: AcmeDemoBundle:Batteries:newBatteryPack }
+
+_statistic:
+    path:     /statistic
+    defaults: { _controller: AcmeDemoBundle:Batteries:statistic }
+
 _demo_secured:
     resource: "@AcmeDemoBundle/Controller/SecuredController.php"
     type:     annotation
