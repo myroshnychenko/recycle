@@ -41,6 +41,7 @@ class BatteriesController extends Controller
     public function statisticAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        //todo: this query should be written in object - oriented way, and be stored in entity repository
         $query = $em->createQuery(
             'SELECT bp.type, SUM(bp.count) as amount
             FROM AcmeDemoBundle:BatteriesPack bp

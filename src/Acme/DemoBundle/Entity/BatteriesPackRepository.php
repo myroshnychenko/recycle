@@ -1,5 +1,7 @@
 <?php
 
+//todo: if class is empty, why to create it?
+
 namespace Acme\DemoBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;

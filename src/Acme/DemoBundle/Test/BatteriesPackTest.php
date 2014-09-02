@@ -8,6 +8,7 @@ class BatteriesPackTest extends WebTestCase
 {
     public function testIndex()
     {
+        //todo: Look to the link, remember, and try to write a test without copy-paste. https://github.com/strannik-06/recycle/blob/master/src/Stas/RecycleBundle/Tests/Controller/BatterypackControllerTest.php
         $client = static::createClient();
 
         $crawler = $client->request('GET', '/statistic');
