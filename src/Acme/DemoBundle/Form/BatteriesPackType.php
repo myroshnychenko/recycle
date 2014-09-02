@@ -7,6 +7,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class BatteriesPackType extends AbstractType
 {
+    //todo: there is a possibility to define data_class in form. Then form will generate entity automatically.
+    
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('type', 'choice', ['choices' => [
