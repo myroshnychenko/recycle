@@ -12,6 +12,7 @@ class BatteriesPackType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('type', 'choice', ['choices' => [
+            //todo: there is the same definition in controller. Consider creating method in this form that will return the array. And re-use it in controller
             '1' => 'AA',
             '2' => 'AAA',
             '3' => 'Undefined'
